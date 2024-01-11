@@ -34,3 +34,28 @@ carsQueue.forEach(c =>{
     refueling(c.fuel, c.size);
 });
 
+//Create counter task
+var createCounter = function(init) {
+    increment(init);
+    decrement(init);
+    reset(init);
+};
+
+function increment(number){
+    ++number;
+    console.log(number);
+};
+
+function decrement(number){
+    --number;
+    console.log(number);
+}
+
+function reset(number){
+    console.log(number);
+}
+
+
+
+
+
