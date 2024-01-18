@@ -16,6 +16,9 @@ var merge = function(nums1, m, nums2, n) {
             } 
         }
     }
+
+    //or sort instead of second if, but it takes more time to execute
+    //return nums1.sort();
 };
 
 
