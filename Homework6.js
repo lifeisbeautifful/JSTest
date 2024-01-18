@@ -1,3 +1,29 @@
+//Merge array task
+var merge = function(nums1, m, nums2, n) {
+    for(i = 0; i < nums1.length; i++){
+        if(nums1[i] === 0 && n > 0){
+            nums1[i] = nums2[n-1];
+            n--;
+        }
+
+        if(i > 0 && nums1[i] < nums1[i-1]){
+            for(let j = i; j > -1; j--){
+                if(nums1[j] < nums1[j-1]){
+                    let temp = nums1[j-1];
+                    nums1[j-1] = nums1[j];
+                    nums1[j] = temp;
+                }
+            } 
+        }
+    }
+};
+
+
+var arr3 = [-1,0,0,3,3,3,0,0,0];
+var arr4 = [1,2,2];
+console.log(merge(arr3, arr3.length, arr4, arr4.length));
+console.log(arr3);
+
 //Train to work with objects
 //3 - 5
 const person = {
